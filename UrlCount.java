@@ -22,18 +22,14 @@ public class UrlCount {
 
     private final static IntWritable one = new IntWritable(1);
     private Text url = new Text();
-    public static final Pattern URL_PATTERN = Pattern.compile("href=\"[^\\\"]*\\\""); 
+    public static final Pattern URL_PATTERN = Pattern.compile("href=\"([^\"]*)\""); 
 
     public void map(Object key, Text value, Context context
                     ) throws IOException, InterruptedException {
-      // StringTokenizer itr = new StringTokenizer(value.toString());
-      // while (itr.hasMoreTokens()) {
-      //   word.set(itr.nextToken());
-      //   context.write(word, one);
       String line = value.toString();
       Matcher matcher = URL_PATTERN.matcher(line);
       while (matcher.find()) {
-        url.set(matcher.group());
+        url.set(matcher.group(1));
         context.write(url, one);
       }
     }
