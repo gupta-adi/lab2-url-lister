@@ -7,7 +7,7 @@ USER=$(shell whoami)
 HADOOP_CLASSPATH=$(shell hadoop classpath)
 
 UrlCount.jar: UrlCount.java
-	javac -classpath $(HADOOP_CLASSPATH) -d ./ UrlCount.java
+	javac -release 11 -classpath $(HADOOP_CLASSPATH) -d ./ UrlCount.java
 	jar cf UrlCount.jar UrlCount*.class	
 	-rm -f UrlCount*.class
 
