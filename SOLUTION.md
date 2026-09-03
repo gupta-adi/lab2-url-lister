@@ -119,6 +119,8 @@ mw-data:TemplateStyles:r1333433106                      121
 
 The same input data was used for both the 2-worker and 4-worker runs.
 
+![output comparasion of both runs](screenshots/output-validation.png)
+
 ## Execution-Time Comparison
 
 ### 4 Workers
