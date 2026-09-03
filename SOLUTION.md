@@ -11,20 +11,20 @@ The program was first tested in the CSEL environment and then run on Google Clou
 The solution requires:
 
 - Java
-- Apache Hadoop / Hadoop MapReduce
+- Apache Hadoop / Hadoop MapReduce API
 - Google Cloud Dataproc
 - Git
 
 ## Resources and Collaboration
 
-Resources used:
+### Resources used:
 
 - Course assignment instructions and course material
 - Apache Hadoop documentation
 - Google Cloud Dataproc documentation
 - Google Cloud `gcloud` documentation
 
-Collaboration:
+### Collaboration:
 
 Implementation of the task was done in my own individual capacity. I took assistance of ChatGPT mainly for debugging and conceptual doubts.
 
@@ -156,6 +156,6 @@ Real execution time: **67.542 seconds**
 | 1 master + 2 workers | 67.542 s |
 | 1 master + 4 workers | 73.278 s |
 
-The 2-worker run was **5.736 seconds faster** than the 4-worker run. This was somewhat surprising because increasing the number of workers from two to four did not reduce the real execution time. A likely reason is that the input for this assignment is small, so the additional workers did not provide enough benefit to reduce the total execution time and on top of that, additional scheduling and coordination overhead may have caused the 4-worker cluster to give such results.
+The 2-worker run was **5.736 seconds faster** than the 4-worker run. This was somewhat surprising because increasing the number of workers from two to four did not reduce the real execution time. A likely reason is that the input for this assignment is small, so the additional workers did not provide enough benefit to reduce the total execution time and on top of that, additional scheduling and coordination overhead may have caused the 4-worker cluster to perform similarly to or even slower than the 2-worker cluster.
 
 
