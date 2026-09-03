@@ -107,17 +107,7 @@ When trying to up-scale to 4 workers, default Dataproc disk allocation exceeded 
 
 ## Output
 
-The output contained 10 URL/count pairs. A sample from the distributed run was:
-
-```text
-#                                                       18
-https://en.wikipedia.org/wiki/Doi_(identifier)          18
-https://en.wikipedia.org/wiki/ISBN_(identifier)         18
-https://en.wikipedia.org/wiki/MapReduce                 6
-mw-data:TemplateStyles:r1333433106                      121
-```
-
-The same input data was used for both the 2-worker and 4-worker runs.
+The same input data was used for both the 2-worker and 4-worker runs. The output contained 10 URL/count pairs.
 
 ![output comparasion of both runs](screenshots/output-validation.png)
 
